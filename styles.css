@@ -1,0 +1,155 @@
+
+
+.cards { /*affects all cards*/
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 100vw;
+    /*border: 1px dotted #000;*/
+}
+.card { /*styling for spesific card, and posision to make whole card link*/
+    max-width: 350px;
+    margin: 10px auto;
+    position: relative;
+    text-align: center;
+    border: 0.5px solid #000;
+}
+
+.card h2, .card p { /*space above/under text*/
+    padding: 0 10px;
+}
+.card img { /*img uses whole card*/
+    width: 100%;
+}
+.price {
+    color: red;
+}
+.card a {
+display: block;
+border: none;
+margin-bottom: 20px;
+color: #000;
+text-align: center;
+cursor: pointer;
+}
+
+.card a:hover {
+    opacity: 0.7;
+}
+.card a::before {/* make entire card link*/
+    content: "";/*content of this element is nothing */
+    position: absolute;/*this beeing in an A ensures no trouble here*/
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+h2 {
+    text-align: center;
+}
+
+.borderwindow {
+    width: 400px;
+    height: 100px;
+    border: 1px solid #000;
+}
+
+
+@media (min-width: 680px) {
+    .cards {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    .card{
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .card * {
+        flex-grow: 0;
+    } 
+    .card * {
+        flex-grow: 1;
+    }
+}
+
+
+/*
+.cards {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .card {
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /**
+    border: 1px solid #2a5aa5;/**
+    max-width: 350px;
+    margin: 10px auto;
+    text-align: center;
+    font-family: sans-serif;
+    position: relative; /*To make whole card a link*
+  }
+  .card h2, .card p { 
+    padding: 0 10px; 
+  }
+  
+  .card img {
+    width: 100%;
+  }
+  
+  .price {
+    color: #2a5aa5;
+    font-size: 1.5rem;
+  }
+  
+  .card a {
+    display: block;
+    border: none;
+    padding: 12px;
+    color: white;
+    background-color: #2a5aa5;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .card a:hover {
+    opacity: 0.7;
+  }
+  
+  /*Make the whole card a link*
+  .card a::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+  }
+  
+  h1 { 
+    text-align: center; 
+  }
+  
+  @media (min-width: 640px) {
+    .cards {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+    .card {
+      margin: 10px;
+      display: flex; /* Place a on bottom *
+      flex-direction: column;
+    }
+    .card > * {
+      flex-grow: 0; /* Place a on bottom *
+    }
+    .card > p.info {
+      flex-grow: 1; /* Place a on bottom, by expanding info *
+    }
+  }
+  */
