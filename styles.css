@@ -1,14 +1,77 @@
 body {
- background-color: fafafa;
+  background-color: #fafafa;
+}
+* {
   margin: 0;
-  padding: 10;
-  
 }
-nav ul {
-  list-style: none;
-  background-color: cornflowerblue;
+#menu{ 
+  background-color: burlywood;
+  padding: 10px;
+  display: flex;
+  justify-content: end;
 }
-body a, h1 {
+
+.fa {
+  margin: 0 10px;
+}
+
+
+nav.hamburger {
+  display: none;
+  /* By default hide the navigation menu */
+}
+
+input#hamburger-menu {
+  display: none; /* Hide the checkbox */
+}
+
+input#hamburger-menu:checked ~ nav.hamburger {
+  display: block;
+  background-color: darkgoldenrod;
+  /* Display nav.hamburger block when checkbox is checked only */
+}
+
+label[for="hamburger-menu"] {
+  font-size: 1em;
+}
+label[for="cart"] {
+  font-size: 1em;
+}
+/* Style the menu itself */
+nav.hamburger ul {
+  list-style-type: none;
+  display: inline-block;
+  left: 10px;
+  width: 350px;
+  background-color: #fafafa;
+  /*border: 1px solid #000;*/
+}
+nav.hamburger li {
+  display: flex;
+  margin: 20px 0px;
+  /*border: 1px solid black;*/
+}
+/* Style the text in the menu */
+nav.hamburger li a {
+  text-decoration: none;
+  color: #000;
+  background: #fafafa;
+  padding: 4px 5px;
+  /*border: 1px solid black;*/
+}
+nav.hamburger li {
+  display: flex;
+  /*border: 1px solid black;*/
+}
+nav.hamburger li:last-child {
+  margin-bottom: 0;
+}
+nav.hamburger li a:hover {
+font-weight: bolder;
+}
+
+
+body a,h1 {
   display: flex;
   justify-content: center;
   margin: 10px;
@@ -30,92 +93,83 @@ footer {
   color: #fafafa;
 }
 
-.cards { /*affects all cards*/
-    display: flex;
-    flex-direction: column;
-    margin: 10px auto;
-    width: 70vw;
-    background-color: aquamarine;
-    /*border: 1px dotted #000;*/
+.cards {
+  /*affects all cards*/
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  width: 80vw;
+  background-color: aquamarine;
+  /*border: 1px dotted #000;*/
 }
-.card { /*styling for spesific card, and posision to make whole card link*/
-    max-width: 350px;
-    margin: 10px auto;
-    position: relative;
-    text-align: center;
-    border: 0.5px solid #000;
+.card {
+  /*styling for spesific card, and posision to make whole card link*/
+  width: 300px;
+  margin: 10px;
+  position: relative;
+  text-align: center;
+  border: 0.5px solid #000;
 }
 
-.card h2, .card p { /*space above/under text*/
-    padding: 0 10px;
+.card h2,p {
+  /*space above/under text*/
+  padding: 0 10px;
+  margin: 5px;
 }
-.card img { /*img uses whole card*/
-    width: 100%;
+.card img {
+  /*img uses whole card*/
+  width: 100%;
 }
 .price {
-    color: red;
+  color: red;
 }
 .card a {
-display: block;
-border: none;
-margin-bottom: 20px;
-color: #000;
-text-align: center;
-cursor: pointer;
+  display: block;
+  border: none;
+  margin-bottom: 10px;
+  color: #000;
+  text-align: center;
+  cursor: pointer;
 }
 
 .card a:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
-.card a::before {/* make entire card link*/
-    content: "";/*content of this element is nothing */
-    position: absolute;/*this beeing in an abseloute ensures no trouble here*/
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
+.card a::before {
+  /* make entire card link*/
+  content: ""; /*content of this element is nothing */
+  position: absolute; /*this beeing in an abseloute ensures no trouble here*/
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
 }
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
 .borderwindow {
-    width: 400px;
-    height: 100px;
-    border: 1px solid #000;
+  width: 400px;
+  height: 400px;
+  border: 1px solid #000;
+  margin: 50;
+  background-color: aqua;
 }
-
 
 @media (min-width: 680px) {
-    .cards {
-      display: grid;
-      grid-template-areas: 
-      'header logo menu'
-      'main main main'
-      'footer footer footer';
-      grid-gap: 5px;
-      padding: 50px;
+  .cards {
+    display: grid;
+    grid-template-areas:
+      "card1 card2 card3"
+      "card4 card5 card6";
   }
-  /* gamle koden på 
-  {
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: center;
-  }
-  */
-  .card{
-      margin: 0px;
-      display: flex;
-      flex-direction: column;
-      align-content: space-between;
-  }
-  .card * {
-      flex-grow: 1;
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    margin: 0;
   }
 }
-
-
-
 
 /*
 .cards {
