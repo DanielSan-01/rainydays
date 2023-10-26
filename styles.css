@@ -1,10 +1,41 @@
+body {
+ background-color: fafafa;
+  margin: 0;
+  padding: 10;
+  
+}
+nav ul {
+  list-style: none;
+  background-color: cornflowerblue;
+}
+body a, h1 {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.heroimage {
+  background-color: #63c915;
+  border: 1px solid #000;
+  width: 100vw;
+  height: 200px;
+}
 
+footer {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  flex-grow: 1;
+  color: #fafafa;
+}
 
 .cards { /*affects all cards*/
     display: flex;
-    flex-direction: row;
-    margin: 0 auto;
-    width: 100vw;
+    flex-direction: column;
+    margin: 10px auto;
+    width: 70vw;
+    background-color: aquamarine;
     /*border: 1px dotted #000;*/
 }
 .card { /*styling for spesific card, and posision to make whole card link*/
@@ -38,7 +69,7 @@ cursor: pointer;
 }
 .card a::before {/* make entire card link*/
     content: "";/*content of this element is nothing */
-    position: absolute;/*this beeing in an A ensures no trouble here*/
+    position: absolute;/*this beeing in an abseloute ensures no trouble here*/
     top: 0px;
     right: 0px;
     bottom: 0px;
@@ -57,22 +88,33 @@ h2 {
 
 @media (min-width: 680px) {
     .cards {
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-    }
-    .card{
-        margin: 10px;
-        display: flex;
-        flex-direction: column;
-    }
-    .card * {
-        flex-grow: 0;
-    } 
-    .card * {
-        flex-grow: 1;
-    }
+      display: grid;
+      grid-template-areas: 
+      'header logo menu'
+      'main main main'
+      'footer footer footer';
+      grid-gap: 5px;
+      padding: 50px;
+  }
+  /* gamle koden på 
+  {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+  }
+  */
+  .card{
+      margin: 0px;
+      display: flex;
+      flex-direction: column;
+      align-content: space-between;
+  }
+  .card * {
+      flex-grow: 1;
+  }
 }
+
+
 
 
 /*
