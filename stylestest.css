@@ -4,6 +4,7 @@ body {
 * {
   margin: 0;
 }
+
 #menu{ 
   background-color: burlywood;
   padding: 10px;
@@ -14,23 +15,18 @@ body {
 .fa {
   margin: 0 5px;
 }
-
-
 nav.hamburger {
   display: none;
   /* By default hide the navigation menu */
 }
-
 input#hamburger-menu {
   display: none; /* Hide the checkbox */
 }
-
 input#hamburger-menu:checked ~ nav.hamburger {
   display: block;
   background-color: darkgoldenrod;
   /* Display nav.hamburger block when checkbox is checked only */
 }
-
 label[for="hamburger-menu"] {
   font-size: 1em;
 }
@@ -69,8 +65,6 @@ nav.hamburger li:last-child {
 nav.hamburger li a:hover {
 font-weight: bolder;
 }
-
-
 body a,h1 {
   display: flex;
   justify-content: center;
@@ -82,7 +76,6 @@ body a,h1 {
   width: 100vw;
   height: 200px;
 }
-
 footer {
   display: flex;
   justify-content: center;
@@ -92,7 +85,6 @@ footer {
   flex-grow: 1;
   color: #fafafa;
 }
-
 .cards {
   /*affects all cards*/
   display: flex;
@@ -110,7 +102,6 @@ footer {
   text-align: center;
   border: 1px solid #000;
 }
-
 .card h2,p {
   /*space above/under text*/
   padding: 0 10px;
@@ -131,7 +122,6 @@ footer {
   text-align: center;
   cursor: pointer;
 }
-
 .card a:hover {
   opacity: 0.7;
 }
@@ -207,4 +197,47 @@ footer {
     margin: 10px;
     background-color: #63c915;
   }
+  .container
+   {
+    display: grid;
+    grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+    grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line];
+    background-color: #63c915;
+  }
+
+  /*-----------testside----------*/
+  main {
+    display: grid;
+  }
+  header { grid-area: header; }
+#logo { grid-area: logo; background-color: pink; }
+nav { grid-area: menu; }
+main { grid-area: main; height: 250px; /**/ }
+aside { grid-area: right; }
+footer { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'logo . . .  menu'
+    'header header header header header'
+    'main   main   main   main   right'
+    'footer footer footer footer footer'; /**/
+  grid-gap: 5px;
+  background-color: SlateGrey;
+  padding: 10px;
+}
+
+.grid-container > * {
+  background-color: LightGrey;
+  text-align: center;
+  padding: 20px 0;
+  font-family: monospace;
+  font-size: 2rem;
+}
+.grid-container > nav {
+  background-color: #63c915;
+}
+
+
 }
