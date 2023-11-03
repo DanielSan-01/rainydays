@@ -1,0 +1,306 @@
+:root {
+  --black: #000;
+  --white: #fafafa;
+  --blue: #042f38;
+  --lightblue: #d7e2eb;
+  --grey: #d9d9d9;
+  --border: 0,5px solid #000;
+}
+* {font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    grid-auto-columns: 1fr;
+    background-color: var(--white);
+}
+
+header{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
+  border: 1px dotted black;
+  & img {
+    max-width: 15rem;
+  }
+}
+.dropdown {
+  display: flex;
+  position: relative;
+  font-size: 1.5rem;
+  & .fa, p {
+    margin: .5rem;
+    align-self: baseline;
+  }
+  & p {
+
+  }
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--grey);
+  z-index: 1;
+  min-width: 10rem;
+  padding-inline: 2rem;
+  top: 3rem;
+
+  & a {
+    color: #000;
+    /* padding-inline: 4rem; */
+    padding-block: 1rem;
+    text-decoration: none;
+    display: block;
+  }
+  & a:hover {
+    opacity: 50%;
+  }
+}
+.dropdown:hover .dropdown-content {/*when hovering over dropmenu & drop-content changes from dispplay none to block*/
+  display: block;
+  float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main {
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+
+.herocontainer {
+    display: grid;
+    max-width: 1920px;
+    background-color: var(--white);
+    grid-template-columns: auto;
+    /* border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+    & .herosection {
+      display: grid;
+      background-color: #042f38;
+      & img {
+        width: 100%;
+        object-fit: cover;
+        height: auto;
+      }
+      & a{
+        display: grid;
+        background-color: var(--white);
+        color: #000;
+        width: 18em;
+        height: auto;
+        text-align: center;
+        line-height: 10px;
+        justify-self: center;
+        align-self: center;
+        border: 0,5px solid black; 
+        padding: 1rem;
+        top: 60%;
+        z-index: 0;
+        box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba
+      }
+      & a:hover {
+        box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;/**/
+       /*transform: translateY(-3px) scale(1.1);**/
+       background-color: #000;
+       color: var(--white);
+     }
+    }
+}
+
+.herosection {
+    display: grid;
+    max-width: 1920px;
+    background-color: var(--white);
+    grid-template-columns: auto;
+    /* border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+    & .herosection {
+      display: grid;
+      background-color: #042f38;
+      & img {
+        width: 100%;
+        object-fit: cover;
+        height: auto;
+      }
+      & a{
+        display: grid;
+        background-color: var(--white);
+        color: #000;
+        width: 18em;
+        height: auto;
+        text-align: center;
+        line-height: 10px;
+        justify-self: center;
+        align-self: center;
+        border: 0,5px solid black; 
+        padding: 1rem;
+        position: absolute;
+        top: 60%;
+        z-index: 0;
+        box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba
+      }
+      & a:hover {
+        box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;/**/
+       /*transform: translateY(-3px) scale(1.1);**/
+       background-color: #000;
+       color: var(--white);
+     }
+    }
+}
+.discoverourproduts {
+  font-size: 2rem;
+  color: var(--black);
+  text-align: center;
+  font-family: 'Montserrat';
+  font-style: italic;
+  text-decoration: none;
+  line-height: 1em;
+  letter-spacing: 0.2em;
+  margin: 1.5em 0;
+}
+.discoverourproduts:hover {
+  font-weight: bolder;
+  color: var(--grey);
+}
+.maincontent {
+  max-width: 100rem;
+  padding-inline: 2rem;
+  height: auto;
+  
+}
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin: 1em 5em;
+}
+.card {
+  max-width: 480px;
+  border: 1px solid black;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  & img {
+    width: 100%;
+    object-fit: contain;
+    aspect-ratio: 1/1;
+  }
+  & h2, p {
+    margin: 0 2rem;
+  }
+  & h2 {
+    font-size: 1.5em;
+  }
+  & p {
+    font-size: 1em;
+    font-weight: bolder;
+  }
+  & a {
+    font-size: 1em;
+    display: block;
+    text-align: center;
+    padding: 1em;
+  }
+  & a:hover {
+     /*box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;/**/
+    transform: translateY(-3px) scale(1.3);
+  }
+  & a::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+  }
+}
+.bigimgcontainer {
+  margin-top: 7em;
+  display: grid;
+  position: relative;
+  max-width: 1920px;
+  grid-template-columns: auto auto;
+  background-color: var(--white);
+  margin: 10rem 1rem;
+  gap: 1rem;
+  justify-items: center;
+  & img {
+    width: 100%;
+    object-fit: cover;
+  }
+  & a{
+    display: grid;
+    background-color: var(--white);
+    padding: 5px;
+    justify-content: center;
+  }
+}
+.stickyfooter{
+  display: grid;
+  width: 100vw;
+  margin-top: 3rem;
+  background-color: var(--black);
+  height: 500px;
+  position: sticky;
+  color: var(--white);
+  list-style: none;
+  & li {
+ display: inline; 
+ color: var(--white);
+
+  }
+}
+ @media only screen and (max-width: 750px) {
+
+  header {
+    font-size: 1rem;
+    margin: 5rem 1rem 1rem 1rem;
+  }
+  .cards {
+    background-color: hotpink;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin: 0.1em;
+    & img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .bigimgcontainer {
+    background-color: hotpink;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 1em;
+  }
+  .discoverourproduts {
+    display: inline;
+    font-size: 1em;
+    color: var(--black);
+    text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    line-height: 1em;
+    letter-spacing: 0.2em;
+    margin: 1.5em 0;
+  }
+}   

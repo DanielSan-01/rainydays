@@ -1,0 +1,37 @@
+* {font-family: 'Montserrat', sans-serif;}
+:root {
+  --black: #000;
+  --white: #fafafa;
+  --blue: #042f38;
+  --lightblue: #d7e2eb;
+  --grey: #d9d9d9;
+  --border: 0,5px solid #000;
+}
+#menuicon{
+  border: 1px solid black;
+  padding: 1rem;
+  font-size: 1rem;
+}
+.dropdown { /*this div needed to position the dropdown content*/
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content { /* dropdown content(should be hidden) */
+  display: none;
+  position: absolute;
+  background-color: bisque;
+  min-width: 10rem;
+  z-index: 1;
+  & a {
+    color: #000;
+    /* padding: 1rem; */
+    text-decoration: none;
+    display: block;
+  }
+  & a:hover {
+    font-weight: bolder;
+  }
+}
+.dropdown:hover .dropdown-content {/*when hovering over dropmenu & content changes from none to block*/
+  display: block;
+}

@@ -1,58 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rainydays</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet"/>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+      <link href="styles.css" rel="stylesheet"/>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-            <label for="hamburger-menu" id="menu">
-                <i class="fa fa-shopping-cart"></i>
-                <i href="shoppingcart.html"class="fa fa-bars"></i> Menu
-            </label>
-        <input type="checkbox" id="hamburger-menu">
-        <nav class="hamburger">
-            <ul>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="aboutus.html">About us</a></li>
-            <li><a href="contactus.html">Contact</a></li>
-            <li><a href="shoppingcart.html">Shopping cart</a></li>
-            <li><a href="index.html">Sign in</a></li>
-            <li><a href="index.html">My orders</a></li>
-            </ul>
-        </nav>
-   </header>
-    <main>
-        <h1>Rainydays</h1>
-        <div class="heroimage">heroimage</div>
-        <a href="products.html" id="discoveradventure">Discover your adventure</a>
-        <section>
-        <div class="cards">
-            <div class="card">
-                <img src="produktbildet" alt="product image">
-                <h2>Mens Better Sweater</h2>
-                <p class="price">1899,-</p>
-                <a href="productpage.html" aria-label="shop our products">Shop now</a>
-            </div>
-            <div class="card">
-                <img src="produktbildet" alt="product image">
-                <h2>Mens Better Sweater</h2>
-                <p class="price">1899,-</p>
-                <a href="productpage.html" aria-label="shop our products">Shop now</a>
-            </div>
-            <div class="card">
-                <img src="produktbildet" alt="product image">
-                <h2>Mens Better Sweater</h2>
-                <p class="price">1899,-</p>
-                <a href="productpage.html" aria-label="shop our products">Shop now</a>
-            </div>
-        </section> 
+<body class="site-grid">
+
+
+
+  <header>
+    <a href="index.html"><img src="assets/rainylogo.png"></a>
+    <div class="dropdown">
+        <i class="fa fa-shopping-cart" ref="shoppingcart.html" id="carticon"></i>
+        <p>menu</p>
+        <i class="fa fa-bars" id="menuicon"></i>
+        <div class="dropdown-content">
+            <a href="index.html">Products</a>
+            <a href="index.html">About</a>
+            <a href="index.html">Contact</a>
+            <a href="index.html">Cart</a>
+            <a href="index.html">Cart</a>
+        </div>
+    </div>
+</header>
+    <main class="main">
+      <section class="herocontainer">
+        <div class="herosection">
+            <img src="/assets/heroimg.jpg" alt="product image">
+                <a href="productpage.html" aria-label="product page">Explore our collection</a>
+        </div>
+      </section>
+      <div class="discovertext">
+        <a href="cards.html" class="discoverourproduts">Discover your adventure</a>
+      </div>
+      <div class="cards">
+          <div class="card">
+              <img src="/assets/jakke7.jpg" alt="product image">
+              <h2>Mens Better Sweater</h2>
+              <p class="price">1899,-</p>
+              <a href="productpage.html" aria-label="product page">Shop now</a>
+          </div>
+          <div class="card">
+              <img src="/assets/jakke7.jpg" alt="product image">
+              <h2>Mens Better Sweater</h2>
+              <p class="price">1899,-</p>
+              <a href="productpage.html" aria-label="product page">Shop now</a>
+          </div>
+          <div class="card">
+            <img src="/assets/jakke7.jpg" alt="product image">
+            <h2>Mens Better Sweater</h2>
+            <p class="price">1899,-</p>
+            <a href="productpage.html" aria-label="product page">Shop now</a>
+          </div>
+      </div>
+      <div class="bigimgcontainerindex">
+        <div class="bigimg1index">
+          <img src="/assets/bigimgwhite.jpg" alt="product image" />
+          <a href="productpage.html" aria-label="product page"
+            >Explore womens collection</a
+          >
+        </div>
+        <div class="bigimg2index">
+          <img src="/assets/bigimageblack.jpg" alt="product image" />
+          <a href="productpage.html" aria-label="product page"
+            >Explore mens collection</a
+          >
+        </div>
+      </div>
+        <div class="bigimgbottom">
+          <a href="productpage.html" aria-label="product page" class="imgbutton-bottom"
+            >Explore our collection</a
+          >
+        </div>
     </main>
-        <footer>
-            <p>May we help you</p>
-        </footer>
-</body>
+    <footer class="footer">
+      <div class="stickyfooter">
+        <p> Copyright&copy; </p>
+        <ul>
+          <li><a href="cards.html">Contact</a></li>
+        <li><a href="contact us.html">FAQ</a></li>
+        <li><a href="about.html">Aboutus</a></li>
+        <li><a href="about.html">Aboutus</a></li>
+        <li><a href="about.html">Aboutus</a></li>
+      </ul>
+      </div>
+    </footer>
+  </body>
 </html>

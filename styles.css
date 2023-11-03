@@ -1,210 +1,333 @@
-body {
-  background-color: #fafafa;
+:root {
+  --black: #000;
+  --white: #fafafa;
+  --blue: #042f38;
+  --lightblue: #d7e2eb;
+  --grey: #d9d9d9;
+  --border: 0,5px solid #000;
 }
-* {
+* {font-family: 'Montserrat', sans-serif;
   margin: 0;
+  padding: 0;
 }
-#menu{ 
-  background-color: burlywood;
-  padding: 10px;
+header{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
+  border: 1px dotted black;
+  & img {
+    max-width: 15rem;
+  }
+}
+.dropdown {
   display: flex;
-  justify-content: end;
+  position: relative;
+  font-size: 1.5rem;
+  & .fa, p {
+    margin: .5rem;
+    align-self: baseline;
+  }
 }
-
-.fa {
-  margin: 0 5px;
-}
-
-
-nav.hamburger {
+.dropdown-content {
   display: none;
-  /* By default hide the navigation menu */
-}
+  position: absolute;
+  background-color: var(--grey);
+  z-index: 1;
+  min-width: 10rem;
+  padding-inline: 2rem;
+  top: 3rem;
 
-input#hamburger-menu {
-  display: none; /* Hide the checkbox */
+  & a {
+    color: #000;
+    /* padding-inline: 4rem; */
+    padding-block: 1rem;
+    text-decoration: none;
+    display: block;
+  }
+  & a:hover {
+    opacity: 50%;
+  }
 }
-
-input#hamburger-menu:checked ~ nav.hamburger {
+.dropdown:hover .dropdown-content {/*when hovering over dropmenu & drop-content changes from dispplay none to block*/
   display: block;
-  background-color: darkgoldenrod;
-  /* Display nav.hamburger block when checkbox is checked only */
+  float: right;
 }
-
-label[for="hamburger-menu"] {
-  font-size: 1em;
+.herocontainer {
+    display: grid;
+    max-width: 1920px;
+    background-color: var(--white);
+    grid-template-columns: auto;
+    /* border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+    & .herosection {
+      display: grid;
+      background-color: #042f38;
+      & img {
+        width: 100%;
+        object-fit: cover;
+        height: auto;
+      }
+      & a{
+        display: grid;
+        background-color: var(--white);
+        color: #000;
+        width: 18em;
+        height: auto;
+        text-align: center;
+        line-height: 10px;
+        justify-self: center;
+        align-self: center;
+        border: 0,5px solid black; 
+        padding: 1rem;
+        top: 60%;
+        z-index: 0;
+        box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba
+      }
+      & a:hover {
+        box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;/**/
+       /*transform: translateY(-3px) scale(1.1);**/
+       background-color: #000;
+       color: var(--white);
+     }
+    }
 }
-label[for="cart"] {
-  font-size: 1em;
+.herosection {
+    display: grid;
+    max-width: 1920px;
+    background-color: var(--white);
+    grid-template-columns: auto;
+    /* border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+    & .herosection {
+      display: grid;
+      background-color: #042f38;
+      & img {
+        width: 100%;
+        object-fit: cover;
+        height: auto;
+      }
+      & a{
+        display: grid;
+        background-color: var(--white);
+        color: #000;
+        width: 18em;
+        height: auto;
+        text-align: center;
+        line-height: 10px;
+        justify-self: center;
+        align-self: center;
+        border: 0,5px solid black; 
+        padding: 1rem;
+        position: absolute;
+        top: 60%;
+        z-index: 0;
+        box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba
+      }
+      & a:hover {
+        box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;/**/
+       /*transform: translateY(-3px) scale(1.1);**/
+       background-color: #000;
+       color: var(--white);
+     }
+    }
 }
-/* Style the menu itself */
-nav.hamburger ul {
-  list-style-type: none;
-  display: inline-block;
-  left: 10px;
-  width: 350px;
-  background-color: #fafafa;
-  /*border: 1px solid #000;*/
-}
-nav.hamburger li {
-  display: flex;
-  margin: 20px 0px;
-  /*border: 1px solid black;*/
-}
-/* Style the text in the menu */
-nav.hamburger li a {
+.discoverourproduts {
+  text-align: center;
+  background-color: var(--white);
+  font-size: 1rem;
+  color: var(--black);
+  font-style: italic;
   text-decoration: none;
-  color: #000;
-  background: #fafafa;
-  padding: 4px 5px;
-  /*border: 1px solid black;*/
+  letter-spacing: 0.2em;
+  margin-inline: auto;
+  max-width: 50rem;
+  margin-block: 7rem;
 }
-nav.hamburger li {
-  display: flex;
-  /*border: 1px solid black;*/
+.discoverourproduts:hover {
+  font-weight: bolder;
+  color: var(--grey);
 }
-nav.hamburger li:last-child {
-  margin-bottom: 0;
-}
-nav.hamburger li a:hover {
-font-weight: bolder;
-}
-
-
-body a,h1 {
+.discovertext {
   display: flex;
   justify-content: center;
-  margin: 10px;
 }
-.heroimage {
-  background-color: #63c915;
-  border: 1px solid #000;
-  width: 100vw;
-  height: 200px;
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: #000;
-  flex-grow: 1;
-  color: #fafafa;
-}
-
 .cards {
-  /*affects all cards*/
-  display: flex;
-  flex-direction: column;
-  margin: 50px auto;
-  width: 90vw;
-  background-color: aquamarine;
-  border: 1px dotted #000;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin: 5em 10em;
+  @media (max-width: 900px) {
+    margin: 0;
+    background-color: hotpink;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }
 .card {
-  /*styling for spesific card, and posision to make whole card link*/
-  width: 300px;
-  margin: 10px;
+  max-width: 480px;
+  border: 1px solid black;
   position: relative;
-  text-align: center;
-  border: 1px solid #000;
-}
-
-.card h2,p {
-  /*space above/under text*/
-  padding: 0 10px;
-  margin: 5px;
-}
-.card img {
-  /*img uses whole card*/
+  height: 100%;
   width: 100%;
-}
-.price {
-  color: red;
-}
-.card a {
-  display: block;
-  border: none;
-  margin-bottom: 10px;
-  color: #000;
-  text-align: center;
-  cursor: pointer;
-}
-
-.card a:hover {
-  opacity: 0.7;
-}
-.card a::before {
-  /* make entire card link*/
-  content: ""; /*content of this element is nothing */
-  position: absolute; /*this beeing in an abseloute ensures no trouble here*/
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-}
-.imageandinfo {
-  display: flex;
-  justify-content: start;
-  width: 90vw;
-  border: 1px solid #000;
-  background-color: aqua;
-  margin: 0 5px 15px 15px;
-  padding: 5px;
-}
-#shopcarticon{
-  background-color: #63c915;
-}
-#mainproductphoto {
-  margin: 10px;
-  display: none;
-}
-
-@media (min-width: 680px) {
-  .cards {
-    display: inline-grid;
-    grid-template-areas:
-      "card1 card2 card3"
-      "card4 card5 card6";
-    /*background-color: violet;*/
-    border: 1px dotted #000;
+  & img {
+    width: 100%;
+    object-fit: contain;
+    aspect-ratio: 1/1;
   }
-  .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin: 1px;
-    border: 1px solid black;
-    background-color: teal;
+  & h2, p {
+    margin: 0 2rem;
   }
-  .card3{
-    background-color: cadetblue;
-    border: 1px dotted #000;
+  & h2 {
+    font-size: 1.5em;
   }
+  & p {
+    font-size: 1em;
+    font-weight: bolder;
+  }
+  & a {
+    font-size: 1em;
+    display: block;
+    text-align: center;
+    padding: 1em;
+  }
+  & a:hover {
+     /*box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;/**/
+    transform: translateY(-3px) scale(1.3);
+  }
+  & a::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+  }
+}
+.stickyfooter{
+  display: grid;
+  width: 100vw;
+  margin-top: 3rem;
+  background-color: var(--black);
+  height: 500px;
+  position: sticky;
+  color: var(--white);
+  list-style: none;
+  & li {
+ display: inline; 
+ color: var(--white);
 
-  .imageandinfo {
-    background-color: #63c915;
-    display: grid;
-    grid-template-areas: " auto auto";
-    width: 500;
-    margin: 0 7vw;
-    grid-template-areas: "image product";
+  }
+}
+.fullcontent {
+  & h1 {
+    padding-inline: 5rem;
+    margin: 1rem 0;
+  }
+  & #logobottomabout {
+    display: block;
+    max-width: 150px;
+    margin-inline: auto;
+    padding: 4rem 0;
+  }
+}
+.wrapper {
+  background-color: grey;
+  max-height: 30rem;
+  /*display: flow-root;/*content cannot escape parent element*/
+  & img {
+    margin-inline: auto;
+    width: 100%;
+    object-fit: contain;
+    max-height: 30rem;
+    margin-inline: auto;
+  }
+}
+.abouttextbox, #abouth1{
+  padding-inline: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: black;
+  gap: 1rem;
+  max-width: 45rem;
+  margin-inline: auto;
+  @media (max-width: 900px) {
+    .abouttextbox {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    p {
+      padding: 0;
+    }
     
-
-  } 
-  .borderwindow {
-    display: flex;
-    flex-direction: column;
-    justify-content: center ;
-    align-items: center;
-    width: 500px;
-    height: 600px;
-    border: 1px solid #000;
-    background-color: aqua;
-  }
-  #mainproductphoto {
-    margin: 10px;
-    background-color: #63c915;
   }
 }
+.bigimgcontainerindex {
+  background-color: var(--white);
+  margin-top: 5rem;
+  margin-inline: 5rem;
+  display: inline-grid;
+  position: relative;
+  max-width: 1920px;
+  grid-template-columns: auto auto;
+  background-color: var(--white);
+  gap: 3em;
+  justify-items: center;
+  & img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  & a{
+    display: grid;
+    background-color: var(--white);
+    padding: 5px;
+    justify-content: center;
+  }
+}
+.bigimgbottom{
+  display: flex;
+  background-image: url(/assets/pairtogether.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5rem;
+  min-height: 25rem;
+  & a:hover {
+    background-color: #000;
+    color: var(--white);
+  }
+  & .imgbutton-bottom{
+    background-color: var(--white);
+    color: var(--black);
+    border: .5px solid var(--black);
+    height: 2rem;
+    background-position-y: bottom;
+    margin-top: 30rem;
+    padding: .5rem;
+  }
+  & a {
+    display: block;
+    margin-inline: auto;
+  }
+}
+ @media only screen and (max-width: 780px) {
+
+  .bigimgcontainerindex {
+    background-color: hotpink;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 1em;
+  }
+
+  .discoverourproduts {    
+    font-size: 1em;
+    color: var(--black);
+    text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    line-height: 1em;
+    letter-spacing: 0.2em;
+    margin: 3rem 0;
+  }
+}   
