@@ -9,16 +9,20 @@
 * {font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: var(--white);
 }
+
 header{
+  margin-inline: auto;
+  max-width: 1280px;
   display: grid;
   grid-template-columns: 3fr 1fr;
   align-items: center;
-  border: 1px dotted black;
   & img {
     max-width: 15rem;
   }
 }
+
 .dropdown {
   display: flex;
   position: relative;
@@ -28,6 +32,7 @@ header{
     align-self: baseline;
   }
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -48,10 +53,12 @@ header{
     opacity: 50%;
   }
 }
+
 .dropdown:hover .dropdown-content {/*when hovering over dropmenu & drop-content changes from dispplay none to block*/
   display: block;
   float: right;
 }
+
 .herocontainer {
     display: grid;
     max-width: 1920px;
@@ -92,6 +99,7 @@ header{
      }
     }
 }
+
 .herosection {
     display: grid;
     max-width: 1920px;
@@ -133,31 +141,34 @@ header{
      }
     }
 }
+
 .discoverourproduts {
   text-align: center;
   background-color: var(--white);
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: var(--black);
   font-style: italic;
   text-decoration: none;
   letter-spacing: 0.2em;
   margin-inline: auto;
-  max-width: 50rem;
-  margin-block: 7rem;
+  margin-block: 5rem;
 }
+
 .discoverourproduts:hover {
   font-weight: bolder;
   color: var(--grey);
 }
+
 .discovertext {
   display: flex;
   justify-content: center;
 }
-.cards {
+
+.cardsindex {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
-  margin: 5em 10em;
+  margin: 5rem 15rem 10rem 15rem;
   @media (max-width: 900px) {
     margin: 0;
     background-color: hotpink;
@@ -165,7 +176,8 @@ header{
     justify-items: center;
   }
 }
-.card {
+
+.cardindex {
   max-width: 480px;
   border: 1px solid black;
   position: relative;
@@ -205,11 +217,12 @@ header{
     bottom: 0px;
   }
 }
+
 .stickyfooter{
   display: grid;
+  background-color: #000;
   width: 100vw;
   margin-top: 3rem;
-  background-color: var(--black);
   height: 500px;
   position: sticky;
   color: var(--white);
@@ -220,10 +233,10 @@ header{
 
   }
 }
+
 .fullcontent {
   & h1 {
-    padding-inline: 5rem;
-    margin: 1rem 0;
+    padding: 1rem;
   }
   & #logobottomabout {
     display: block;
@@ -231,28 +244,33 @@ header{
     margin-inline: auto;
     padding: 4rem 0;
   }
+  & h2, p {
+    margin-block: 1rem;
+  }
 }
+
 .wrapper {
-  background-color: grey;
+  background-color: var(--grey);
+  margin-inline: auto;
   max-height: 30rem;
   /*display: flow-root;/*content cannot escape parent element*/
   & img {
-    margin-inline: auto;
     width: 100%;
     object-fit: contain;
     max-height: 30rem;
     margin-inline: auto;
   }
+  
 }
-.abouttextbox, #abouth1{
-  padding-inline: 5rem;
+
+.abouttextbox, h1{
   display: grid;
   grid-template-columns: 1fr 1fr;
   color: black;
   gap: 1rem;
   max-width: 45rem;
   margin-inline: auto;
-  @media (max-width: 900px) {
+  @media (min-width: 900px) {
     .abouttextbox {
       display: grid;
       grid-template-columns: 1fr;
@@ -263,6 +281,12 @@ header{
     
   }
 }
+
+.bottomindexsection{
+  display: grid;
+  gap: 5rem;
+}
+
 .bigimgcontainerindex {
   background-color: var(--white);
   margin-top: 5rem;
@@ -286,13 +310,16 @@ header{
     justify-content: center;
   }
 }
+
 .bigimgbottom{
   display: flex;
+  justify-content: center;
+  align-items: flex-end;
   background-image: url(/assets/pairtogether.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 5rem;
-  min-height: 25rem;
+  background-position: center;
+  min-height: 35rem;
   & a:hover {
     background-color: #000;
     color: var(--white);
@@ -302,15 +329,15 @@ header{
     color: var(--black);
     border: .5px solid var(--black);
     height: 2rem;
-    background-position-y: bottom;
-    margin-top: 30rem;
-    padding: .5rem;
   }
   & a {
     display: block;
-    margin-inline: auto;
+    margin-bottom: 1rem;
+    padding: .7rem;
+
   }
 }
+
  @media only screen and (max-width: 780px) {
 
   .bigimgcontainerindex {
@@ -320,7 +347,7 @@ header{
     gap: 1em;
   }
 
-  .discoverourproduts {    
+/*   .discoverourproduts {    
     font-size: 1em;
     color: var(--black);
     text-align: center;
@@ -329,5 +356,9 @@ header{
     line-height: 1em;
     letter-spacing: 0.2em;
     margin: 3rem 0;
+  } */
+  .dropdown:click .dropdown-content {/*find a way to solve this*/
+    display: block;
+    float: right;
   }
 }   

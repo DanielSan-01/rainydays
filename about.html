@@ -25,21 +25,65 @@
             <a href="index.html">index</a>
         </div>
     </div>
-</header>
-<main class="main"> 
+</header>.fullcontent {
+  & h1 {
+    padding: 1rem;
+  }
+  & #logobottomabout {
+    display: block;
+    max-width: 150px;
+    margin-inline: auto;
+    padding: 4rem 0;
+  }
+  & h2, p {
+    margin-block: 1rem;
+  }
+}
+.wrapper {
+  background-color: var(--grey);
+  margin-inline: auto;
+  max-height: 30rem;
+  /*display: flow-root;/*content cannot escape parent element*/
+  & img {
+    width: 100%;
+    object-fit: contain;
+    max-height: 30rem;
+    margin-inline: auto;
+  }
+  
+}
+.abouttextbox, h1{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: black;
+  gap: 1rem;
+  max-width: 45rem;
+  margin-inline: auto;
+  @media (min-width: 900px) {
+    .abouttextbox {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    p {
+      padding: 0;
+    }
+    
+  }
+}
+<main>
   <section class="fullcontent">
-    <div class="wrapper">
-        <img src="assets/aboutusimg.jpg" id="aboutimage" alt="decorative image">
-    </div>
-    <h1 id="abouth1">About us</h1>
-    <div class="abouttextbox">
-        <p id="abouttext1">Founded in Bergen, Norway, our products are tried and extesevly tested for life in the Norwegian west coast. Rainydays forges ahead for innovation while celebrating modern design. The jackets are mid-range in price and emphasize durability and being suitable for a range of different weather types ensuring customers are comfortable whatever adventure they go on.
-        </p>
-        <p id="abouttext2">Join us in making a difference with sustainable outdoor gear. The EcoTrail™ Recycled Hiking Jacket is not just a jacket; it's a statement of your commitment to a greener, more responsible world. Whether you're conquering mountain peaks or strolling through local parks, do it in style, comfort, and with the environment in mind. Choose the EcoTrail™ Recycled Hiking Jacket today and embark on your adventures while leaving a positive impact on the planet. Upgrade your outdoor experience and be part of the movement toward a more sustainable future.
-        </p>    
-    </div>
-    <img src="assets/rainylogo.png" alt="logophoto" id="logobottomabout">    
-</section>
+      <div class="wrapper">
+          <img src="assets/aboutusimg.jpg" id="aboutimage" alt="decorative image">
+      </div>
+      <h1>About us</h1>
+      <div class="abouttextbox">
+          <p id="abouttext1">Founded in Bergen, Norway, our products are tried and extesevly tested for life in the Norwegian west coast. Rainydays forges ahead for innovation while celebrating modern design. The jackets are mid-range in price and emphasize durability and being suitable for a range of different weather types ensuring customers are comfortable whatever adventure they go on.
+          </p>
+          <p id="abouttext2">Join us in making a difference with sustainable outdoor gear. The EcoTrail™ Recycled Hiking Jacket is not just a jacket; it's a statement of your commitment to a greener, more responsible world. Whether you're conquering mountain peaks or strolling through local parks, do it in style, comfort, and with the environment in mind. Choose the EcoTrail™ Recycled Hiking Jacket today and embark on your adventures while leaving a positive impact on the planet. Upgrade your outdoor experience and be part of the movement toward a more sustainable future.
+          </p>    
+      </div>
+      <img src="assets/rainylogo.png" alt="logophoto" id="logobottomabout">    
+  </section>
 </main>
     <footer class="footer">
       <div class="stickyfooter">
