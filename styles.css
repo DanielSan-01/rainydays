@@ -237,6 +237,8 @@ header{
 .fullcontent {
   & h1 {
     padding: 1rem;
+    max-width: 45rem;
+    margin-inline: auto;
   }
   & #logobottomabout {
     display: block;
@@ -263,7 +265,7 @@ header{
   
 }
 
-.abouttextbox, h1{
+.abouttextbox{
   display: grid;
   grid-template-columns: 1fr 1fr;
   color: black;
