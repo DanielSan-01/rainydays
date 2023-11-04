@@ -33,14 +33,15 @@ header{
   }
 }
 
-.dropdown-content {
+.dropdown-content { /*the dropmenu needs to overlap with icons to be able to register the hovering*/
   display: none;
   position: absolute;
-  background-color: var(--grey);
+  background-color: var(--white);
   z-index: 1;
-  min-width: 10rem;
+  min-width: 15rem;
   padding-inline: 2rem;
   top: 3rem;
+  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
 
   & a {
     color: #000;
@@ -176,8 +177,24 @@ header{
     justify-items: center;
   }
 }
+.containerproducts {
+  max-width: 1400px;
+  padding-inline: 2rem;
+  margin-inline: auto;
+  margin-top: 2rem;
+}
+.cardsproducts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  @media (max-width: 900px) {
+    margin: 0;
+    background-color: hotpink;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
 
-.cardindex {
+.card {
   max-width: 480px;
   border: 1px solid black;
   position: relative;
@@ -203,10 +220,14 @@ header{
     display: block;
     text-align: center;
     padding: 1em;
+    text-decoration: none;
+    color: var(--black);
   }
   & a:hover {
      /*box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;/**/
-    transform: translateY(-3px) scale(1.3);
+    /* transform: translateY(-3px) scale(1.3); */
+    font-weight: bolder;
+    color: var(--grey);
   }
   & a::before {
     content: "";
