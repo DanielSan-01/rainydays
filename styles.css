@@ -238,6 +238,62 @@ header{
     bottom: 0px;
   }
 }
+.containerforproductpage{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-inline: auto;
+  width: 70vw;
+  gap: 2rem;
+
+
+  & .productpicture{
+    border: .5px solid var(--black);
+    & img {
+      width: 100%;
+      max-width: 45rem;
+    }
+  }
+  & .productinfo{
+    border: .5px solid var(--black);
+  }
+  & .sizebuttonscontainer{
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem;
+    font-weight: bold;
+    & button:hover{/* change this to edit all buttons */
+      background-color: var(--white);
+      color: var(--blue);
+      padding: 1rem 1.5rem;
+      font-weight: bolder;
+      border: 2px solid var(--blue);      
+    }
+
+  }
+  & .addtocartcontainer {
+    display: flex;
+    justify-content: center;
+    & button{
+      padding: 1.5rem 5rem;
+      font-size: larger;
+      border: 2px solid var(--blue);      
+    }
+    & button:hover{
+      padding: 1.5rem 5rem;
+      font-weight: bolder;
+      background-color: var(--white);
+      color: var(--blue);
+    }
+  }
+  & button{
+    background-color: #042f38;
+    color: var(--white);
+    padding: 1rem 1.5rem;
+  }
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
 
 .stickyfooter{
   display: grid;
@@ -254,6 +310,10 @@ header{
 
   }
 }
+
+
+
+
 
 .fullcontent {
   & h1 {
@@ -304,6 +364,66 @@ header{
     
   }
 }
+.fullcontentcontact {
+  & h1 {
+  display: none;
+  }
+}
+.wrappercontact {
+  background-color: var(--grey);
+  margin-inline: auto;
+  max-height: 30rem;
+  /*display: flow-root;/*content cannot escape parent element*/
+  & img {
+    width: 100%;
+    object-fit: none;
+    object-position: 50%;
+    max-width: 1920px;
+    max-height: 30rem;
+  }  
+  @media (min-width: 900px) {
+    {padding: 0 10rem;
+    background-color: pink;}
+  }
+}
+
+.formsectioncontact {
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  max-width: 50rem;
+  & h2, p {
+    margin-block: 1rem;
+  }
+  & ul {
+    list-style: none;
+  }
+  & img {
+    width: 100%;
+    display: grid;
+    max-width: 30rem;
+    margin-top: 5rem;
+    margin-inline: auto;
+  }
+  & #submitbutton {
+    margin-left: 2.5rem;
+    padding: .5rem;
+  }
+  @media (max-width: 900px) {
+    margin-inline: auto;
+    background-color: hotpink;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    & img{
+      display: none;
+    }
+  }
+}
+
+
+
+
 
 .bottomindexsection{
   display: grid;
