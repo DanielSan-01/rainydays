@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="corse assignment HTML and CSS @ noroff fagskole">
+    <meta name="description" content="Ceckoutpage">
     <meta name="keywords" content="HTML, CSS">
     <meta name="author" content="Dannielsan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,7 +22,7 @@
   </head>
   <body class="site-grid">
     <header>
-      <a href="index.html"><img src="assets/rainylogo.png" /></a>
+      <a href="index.html"><img src="assets/rainylogo.png" alt="logoheader"/></a>
       <div class="dropdown">
         <i
           class="fa fa-shopping-cart"
@@ -73,14 +74,14 @@
         <div class="checkoutinputarea">
           <h2>Fill in shipping info</h2>
           <form class="inputgrid">
-            <input type="text" placeholder="First Name">
-            <input type="text" placeholder="Last Name">
-            <input type="text" placeholder="E-mail">
-            <input type="text" placeholder="Phone number">
-            <input type="text" placeholder="Contry/region">
-            <input type="text" placeholder="City">
-            <input type="text" placeholder="Adress" id="adress">
-            <button type="submit"><a href="cartsucsess.html"></a>Payment</button>
+            <input type="text" placeholder="First Name" name="fname">
+            <input type="text" placeholder="Last Name" name="lname">
+            <input type="text" placeholder="E-mail" name="email">
+            <input type="text" placeholder="Phone number" name="number">
+            <input type="text" placeholder="Contry/region" name="contry">
+            <input type="text" placeholder="City" name="City">
+            <input type="text" placeholder="Adress" id="adress" name="adress">
+            <button type="submit" name="cartmutton"><a href="cartsucsess.html"></a>Payment</button>
           </form>
           <div class="checkbox">
             <input type="checkbox" name="checbox" class="checkbox">
@@ -111,8 +112,7 @@
         <div class="footer3">
           <p class="footertitle3">Sign up for email updates</p>
           <p>E-mail</p>
-          <input type="text" />
-          <a href="emailunsubscribe">E-mail unsubscribe</a>
+          <input type="text" placeholder="Sign up for email updates" name="emailsignup"/>
         </div>
       </div>
     </footer>
