@@ -13,7 +13,6 @@
 & .hidoh1 {
   display: none;
 }
-
 }
 
 header{
@@ -24,10 +23,12 @@ header{
   align-items: center;
   & img {
     max-width: 15rem;
-    margin-left: 5rem;
+    margin-left: 2rem;
   }
 }
-
+.main{
+  background-color: var(--white);
+}
 .dropdown {
   display: flex;
   position: relative;
@@ -65,104 +66,47 @@ header{
   float: right;
 }
 
-.herocontainer {
-    display: grid;
-    max-width: 1920px;
-    background-color: var(--white);
-    grid-template-columns: auto;
-    /* border: 1px solid black; */
+.herocontainer{
+  & .herosection {
+    min-height: 35rem;
+    margin-inline: 5rem;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    & .herosection {
-      display: grid;
-      background-color: #042f38;
-      & img {
-        width: 100%;
-        object-fit: cover;
-        height: auto;
-      }
-      & a{
-        display: grid;
-        background-color: var(--white);
-        color: #000;
-        width: 18em;
-        height: auto;
-        text-align: center;
-        line-height: 10px;
-        justify-self: center;
-        align-self: center;
-        border: 0,5px solid black; 
-        padding: 1rem;
-        top: 60%;
-        z-index: 0;
-        box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba
-      }
-      & a:hover {
-        box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;/**/
-       /*transform: translateY(-3px) scale(1.1);**/
-       background-color: #000;
-       color: var(--white);
-     }
+    align-items: flex-end;
+    background-image: url(/assets/heroimg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    & a:hover {
+      background-color: #000;
+      color: var(--white);
     }
-}
-
-.herosection {
-    display: grid;
-    max-width: 1920px;
-    background-color: var(--white);
-    grid-template-columns: auto;
-    /* border: 1px solid black; */
-    justify-content: center;
-    align-items: center;
-    & .herosection {
-      display: grid;
-      background-color: #042f38;
-      & img {
-        width: 100%;
-        object-fit: cover;
-        height: auto;
-      }
-      & a{
-        display: grid;
-        background-color: var(--white);
-        color: #000;
-        width: 18em;
-        height: auto;
-        text-align: center;
-        line-height: 10px;
-        justify-self: center;
-        align-self: center;
-        border: 0,5px solid black; 
-        padding: 1rem;
-        position: absolute;
-        top: 60%;
-        z-index: 0;
-        box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba
-      }
-      & a:hover {
-        box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;/**/
-       /*transform: translateY(-3px) scale(1.1);**/
-       background-color: #000;
-       color: var(--white);
-     }
+    & .imgbutton-hero{
+      background-color: var(--white);
+      color: var(--black);
+      border: .5px solid var(--black);
+      padding: 1rem;
     }
+    & a {
+      display: block;
+      margin-bottom: 1rem;
+      padding: .7rem;
+    }
+  }
 }
 
 .discoverourproduts {
-  text-align: center;
-  background-color: var(--white);
   font-size: 1.3rem;
   color: var(--black);
+  background-color: var(--white);
   font-style: italic;
   text-decoration: none;
   letter-spacing: 0.2em;
-  margin-inline: auto;
   margin-block: 5rem;
 }
 
 .discoverourproduts:hover {
   font-weight: bolder;
-  color: var(--grey);
 }
 
 .discovertext {
@@ -205,9 +149,14 @@ header{
 
   & a{
     display: grid;
+    border: .5 solid var(--black);
     background-color: var(--white);
     padding: 5px;
     justify-content: center;
+    color: var(--black);
+    font-style: italic;
+    text-decoration: none;
+    letter-spacing: 0.2em;
   }
 }
 
@@ -229,7 +178,7 @@ header{
     background-color: var(--white);
     color: var(--black);
     border: .5px solid var(--black);
-    height: 2rem;
+    padding: 1rem;
   }
   & a {
     display: block;
@@ -301,6 +250,7 @@ header{
     bottom: 0px;
   }
 }
+
 .containerforproductpage{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -415,18 +365,6 @@ header{
   }
 }
 
-.fullcontentcontact {
-  & h1 {
-  display: none;
-  }
-  & img {
-    display: block;
-    margin-inline: auto;
-    margin-top: 3rem;
-    max-width: 20rem;
-  }
-}
-
 .wrappercontact {
   background-color: var(--grey);
   margin-inline: auto;
@@ -435,13 +373,14 @@ header{
   & img {
     width: 100%;
     object-fit: contain;
-    object-position: 50%;
     max-height: 30rem;
     margin-inline: auto;
   }  
   @media (min-width: 900px) {
-    {padding: 0 10rem;
-    background-color: pink;}
+    {
+    padding: 0 10rem;
+    background-color: pink;
+    }
   }
 }
 
@@ -458,9 +397,10 @@ header{
     list-style: none;
   }
   & img {
+    grid-area: 2/1/2/span 2;/* row start/col start /rowend/ colend */
     width: 100%;
     display: grid;
-    max-width: 30rem;
+    max-width: 20rem;
     margin-top: 5rem;
     margin-inline: auto;
   }
@@ -524,9 +464,11 @@ header{
     grid-template-columns: 1fr;
   }
 }
+
 footer {
   margin-top: 5rem;
 }
+
 .footercollums{
   min-height: 500px;
   margin-inline: auto;
