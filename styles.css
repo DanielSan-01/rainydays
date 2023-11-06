@@ -9,7 +9,7 @@
 * {font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-  /* background-color: var(--white); */
+  background-color: var(--white); 
 }
 
 header{
@@ -40,7 +40,7 @@ header{
   z-index: 1;
   min-width: 15rem;
   padding-inline: 2rem;
-  top: 3rem;
+  top: 2.2rem;
   box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
 
   & a {
@@ -521,8 +521,7 @@ header{
         font-size: larger;
         border: 2px solid var(--blue);      
       }
-      & :hover{
-        padding: 1.5rem 5rem;
+      & a:hover{
         font-weight: bolder;
         background-color: var(--white);
         color: var(--blue);
