@@ -26,7 +26,7 @@ header{
     margin-left: 2rem;
   }
 }
-.main{
+.main {
   background-color: var(--white);
 }
 .dropdown {
@@ -119,6 +119,7 @@ header{
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
   margin-inline: 5rem;
+  margin-block: 3rem;
   @media (max-width: 900px) {
     margin: 0;
     background-color: hotpink;
@@ -137,7 +138,6 @@ header{
   margin-inline: 5rem;
   display: inline-grid;
   position: relative;
-  max-width: 1920px;
   grid-template-columns: auto auto;
   background-color: var(--white);
   gap: 3em;
@@ -257,8 +257,6 @@ header{
   margin-inline: auto;
   width: 70vw;
   gap: 2rem;
-
-
   & .productpicture{
     border: .5px solid var(--black);
     & img {
@@ -268,6 +266,17 @@ header{
   }
   & .productinfo{
     border: .5px solid var(--black);
+    & h2, h3, p {
+      margin-left: 4rem;
+      margin-block: 10px;
+    }
+    & ul { 
+      margin-left: 5rem;
+    }
+    & .bulletpointsproducttext{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
   }
   & .sizebuttonscontainer{
     display: flex;
@@ -286,6 +295,7 @@ header{
   & .addtocartcontainer {
     display: flex;
     justify-content: center;
+    margin: 1rem;
     & a {
       padding: 1.5rem 5rem;
       font-size: larger;
@@ -422,43 +432,45 @@ header{
 .checkoutgrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: hotpink;
-  margin: 5rem;
+  margin: 4rem;
   justify-items: center;
+  background-color: var(--white);
+
   & .checkoutinputarea {
-    border: .5 solid var(--black);
-    background-color: #042f38;
+    border: .5px solid var(--black);
+    padding: 5rem;
     & ul {
       list-style: none;
     }
   }
   & .checkoutinformationarea{
-    border: .5 solid var(--black);
-    max-width: 95vw;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    border: .5px solid var(--black);
     & img {
       max-width: 5rem;
       width: 100%;
       object-fit: contain;
     }
-    & #shoppingbag {
-      display: block;
-      margin-inline: auto;
+    & #shoppingbag,p {
+      display: flex;
+      justify-content: center;
+      font-size: larger;
     }
-    & .checkoutpricegrid{
+    
+    & .titlepicturepricecontainer{
       display: grid;
+      grid-template-columns: 1fr 2fr;
+      justify-items: right;
+    }  
+    & .checkoutpricegrid{
+      display: flex;
+      justify-content: space-between;
       grid-template-columns: 1fr 1fr;
-      & a{
-        padding: 1.5rem 5rem;
-        font-size: larger;
-        border: 2px solid var(--blue);      
-      }
-      & a:hover{
-        font-weight: bolder;
-        background-color: var(--white);
-        color: var(--blue);
-      }
-    }    
+    }  
   }
+
   @media (max-width: 900px) {
     background-color: hotpink;
     grid-template-columns: 1fr;
