@@ -17,8 +17,9 @@ body {
     grid-auto-columns: 1fr;
     background-color: var(--white);
 }
-
+feil css
 header{
+  
   display: grid;
   grid-template-columns: 3fr 1fr;
   align-items: center;

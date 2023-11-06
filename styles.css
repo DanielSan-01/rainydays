@@ -9,7 +9,7 @@
 * {font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: var(--white);
+  /* background-color: var(--white); */
 }
 
 header{
@@ -273,22 +273,29 @@ header{
   & .addtocartcontainer {
     display: flex;
     justify-content: center;
-    & button{
+    & a {
       padding: 1.5rem 5rem;
       font-size: larger;
-      border: 2px solid var(--blue);      
+      border: 2px solid var(--blue);   
+      background-color: #042f38;
+      color: var(--white);   
     }
-    & button:hover{
+    & a:hover{
       padding: 1.5rem 5rem;
       font-weight: bolder;
       background-color: var(--white);
       color: var(--blue);
     }
   }
-  & button{
+  & button ,a{
     background-color: #042f38;
     color: var(--white);
     padding: 1rem 1.5rem;
+  }    & button:hover{
+    padding: 1.5rem 5rem;
+    font-weight: bolder;
+    background-color: var(--white);
+    color: var(--blue);
   }
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
@@ -478,6 +485,53 @@ header{
     margin-bottom: 1rem;
     padding: .7rem;
 
+  }
+}
+
+.checkoutgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: hotpink;
+  margin: 5rem;
+  justify-items: center;
+  & .checkoutinputarea {
+    border: .5 solid var(--black);
+    background-color: #042f38;
+    & ul {
+      list-style: none;
+    }
+  }
+  & .checkoutinformationarea{
+    border: .5 solid var(--black);
+    max-width: 95vw;
+    & img {
+      max-width: 5rem;
+      width: 100%;
+      object-fit: contain;
+    }
+    & #shoppingbag {
+      display: block;
+      margin-inline: auto;
+    }
+    & .checkoutpricegrid{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      & a{
+        padding: 1.5rem 5rem;
+        font-size: larger;
+        border: 2px solid var(--blue);      
+      }
+      & :hover{
+        padding: 1.5rem 5rem;
+        font-weight: bolder;
+        background-color: var(--white);
+        color: var(--blue);
+      }
+    }    
+  }
+  @media (max-width: 900px) {
+    background-color: hotpink;
+    grid-template-columns: 1fr;
   }
 }
 
