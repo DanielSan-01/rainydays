@@ -73,7 +73,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    background-image: url(/assets/heroimg.jpg);
+    background-image: url(./assets/heroimg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -164,7 +164,7 @@ header{
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  background-image: url(/assets/pairtogether.jpg);
+  background-image: url(./assets/pairtogether.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
