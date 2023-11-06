@@ -2,6 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="corse assignment HTML and CSS @ noroff fagskole">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="author" content="Dannielsan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout page</title>
     <link
@@ -32,7 +35,6 @@
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
           <a href="cart.html">Cart</a>
-          <a href="index.html">index</a>
         </div>
       </div>
     </header>
@@ -43,10 +45,13 @@
           <i class="fa fa-shopping-bag" id="shoppingbag">1 items</i>
           <p>______________________________</p>
           <div class="titlepicturepricecontainer">
-            <img src=".assets/jakke7.jpg" alt="productjacket">
+            <img src="./assets/jakke7.jpg" alt="productjacketsmall">
             <div class="textinfoareainsideinformationgrid">
               <a>Mens better jacket</a>
-              <p>1899,-</p>
+              <div class="priceandquantity">
+                <p>Qty:1 </p>
+                <p>1899,-</p>
+              </div>
             </div>
           </div>
           <p>______________________________</p>
@@ -66,41 +71,21 @@
           </div>
         </div>
         <div class="checkoutinputarea">
-          <form action="stillnolocal" method="get">
-            <ul>
-              <li>
-                <p>Firstname</p>
-                <input type="text" />
-              </li>
-              <li>
-                <p>Lastname</p>
-                <input type="text" />
-              </li>
-              <li>
-                <p>E-mail</p>
-                <input type="text" />
-              </li>
-              <li>
-                <p>Adress</p>
-                <input type="text" />
-              </li>
-              <li>
-                <p>Contry/regin</p>
-                <input type="text" />
-              </li>
-              <li>
-                <p>City</p>
-                <input type="text" />
-              </li>
-              <li>
-                <p>Phone number</p>
-                <input type="text" />
-              </li>
-              <li class="button">
-                <button type="submit">Checkout</button>
-              </li>
-            </ul>
+          <h2>Fill in shipping info</h2>
+          <form class="inputgrid">
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+            <input type="text" placeholder="E-mail">
+            <input type="text" placeholder="Phone number">
+            <input type="text" placeholder="Contry/region">
+            <input type="text" placeholder="City">
+            <input type="text" placeholder="Adress" id="adress">
+            <button type="submit"><a href="cartsucsess.html"></a>Payment</button>
           </form>
+          <div class="checkbox">
+            <input type="checkbox" name="checbox" class="checkbox">
+            <label for="checbox" class="checbox">I agree to legal terms and conditions</label>
+          </div>
         </div>
       </div>
     </main>
@@ -133,3 +118,37 @@
     </footer>
   </body>
 </html>
+
+<!-- <ul>
+              <li>
+                <p>Firstname</p>
+                <input type="text" />
+              </li>
+              <li>
+                <p>Lastname</p>
+                <input type="text" />
+              </li>
+              <li>
+                <p>E-mail</p>
+                <input type="text" />
+              </li>
+              <li>
+                <p>Adress</p>
+                <input type="text" />
+              </li>
+              <li>
+                <p>Contry/regin</p>
+                <input type="text" />
+              </li>
+              <li>
+                <p>City</p>
+                <input type="text" />
+              </li>
+              <li>
+                <p>Phone number</p>
+                <input type="text" />
+              </li>
+              <li class="button">
+                <button type="submit">Checkout</button>
+              </li>
+            </ul> -->
