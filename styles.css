@@ -17,15 +17,23 @@
 }
 
 header {
-  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
   max-width: 1280px;
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  align-items: center;
-  & img {
-    max-width: 15rem;
-    margin-left: 2rem;
-  }
+  width: 100%;
+  margin-inline: auto;
+  & .navlogo {
+    background-image: url(./assets/rainylogo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 2rem;
+    min-width: 10rem;
+   }
+   #menucheck {
+    display: none;
+   } 
 }
 
 .main {
@@ -35,11 +43,16 @@ header {
 .dropdown {
   display: flex;
   position: relative;
-  font-size: 1.5rem;
-  & .fa,
-  p {
-    margin: 0.5rem;
+  font-size: 1.3rem;
+  & .fa  {
+    margin: 1rem 0.5rem;
     align-self: baseline;
+  }
+  & p {
+    margin: 0.9rem 0.5rem;
+  }
+  @media (max-width: 900px) {
+    font-size: 1rem;
   }
 }
 
@@ -98,6 +111,11 @@ header {
       padding: 0.7rem 1rem;
     }
   }
+  @media (max-width: 900px){
+    .herosection {
+      margin: .5rem;
+    }
+  }
 }
 
 .discoverourproduts {
@@ -153,6 +171,9 @@ header {
     text-decoration: none;
     letter-spacing: 0.2em;
   }
+  @media (max-width: 900px) {
+    margin: 0.5rem;
+  }
 }
 
 .bigimgbottomindex {
@@ -179,6 +200,9 @@ header {
     display: block;
     margin-bottom: 1rem;
     padding: 0.7rem;
+  }
+  @media (max-width: 900px) {
+    margin: 0.5rem;
   }
 }
 
@@ -561,9 +585,14 @@ footer {
     gap: 1em;
   }
 
-  .dropdown:active .dropdown-content {
-    /*find a way to solve this*/
-    display: block;
+  .dropdown-content {
+    display: none;
     float: right;
   }
+   #menucheck {
+    display: none;
+   }
+   #menucheck:checked ~ .dropdown-content {
+    display: block;
+   }
 }
