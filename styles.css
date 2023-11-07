@@ -346,6 +346,8 @@ header {
   }
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
+    margin-inline: 0;
+    width: 100vw;
   }
 }
 
@@ -454,9 +456,11 @@ header {
 
 .checkoutgrid {
   display: grid;
+  overflow: hidden;
   grid-template-columns: 1fr 1fr;
   margin: 4rem;
   justify-items: center;
+  align-items: center;
   background-color: var(--white);
   h2 {
     margin: 1rem 0;
@@ -464,7 +468,6 @@ header {
   }
   & .checkoutinputarea {
     & .inputgrid {
-      max-width: 745px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       justify-items: center;
@@ -489,10 +492,20 @@ header {
     & #adress {
       grid-area: 4/1/5 / span 2;
       min-width: 472px;
+      @media (max-width: 900px) {
+        min-width: auto;
+        
+      }
     }
     & .checkbox {
       display: flex;
       justify-content: center;
+    }
+    @media (max-width: 500px) {
+      .inputgrid, h2{
+        display: block;
+        margin-inline: 5rem;
+      }
     }
   }
   & .checkoutinformationarea {
@@ -522,22 +535,24 @@ header {
         grid-template-columns: auto;
       }
     }
+    .priceandquantity {
+      display: flex;
+      justify-content: space-between;
+    }
+    & .checkoutpricegrid {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    @media (max-width: 900px) {
+      padding: 2rem;
+      margin-inline: auto;
+    }
   }
-  & .checkoutpricegrid {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-  }
-
   @media (max-width: 900px) {
-    background-color: var(--white);
     grid-template-columns: 1fr;
-    justify-items: center;
-  }
-
-  .priceandquantity {
-    display: flex;
-    justify-content: space-between;
+    margin-inline: 0rem;
+    justify-content: start;
   }
 }
 footer {
