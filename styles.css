@@ -471,6 +471,10 @@ header {
       display: grid;
       grid-template-columns: 1fr 1fr;
       justify-items: center;
+      & .paymentbutton {
+        text-decoration: none;
+        color: var(--white);
+      }
     }
     button[type="submit"] {
       color: var(--white);
@@ -502,7 +506,7 @@ header {
       justify-content: center;
     }
     @media (max-width: 500px) {
-      .inputgrid, h2{
+      .inputgrid, h2, h3{
         display: block;
         margin-inline: 5rem;
       }
