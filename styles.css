@@ -31,8 +31,43 @@ input#hamburger-menu:checked ~ nav.hamburger {
   /* Display nav.hamburger block when checkbox is checked only */
 }
 
+<<<<<<< Updated upstream
 label[for="hamburger-menu"] {
   font-size: 1em;
+=======
+.herocontainer {
+  & .herosection {
+    min-height: 50rem;
+    margin-inline: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-image: url(./assets/heroimg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    & a:hover {
+      background-color: var(--black);
+      color: var(--white);
+    }
+    & .imgbutton-hero {
+      background-color: var(--white);
+      color: var(--black);
+      border: 0.5px solid var(--black);
+      padding: 1rem;
+    }
+    & a {
+      display: block;
+      margin-bottom: 1rem;
+      padding: 0.7rem 1rem;
+    }
+  }
+  @media (max-width: 900px){
+    .herosection {
+      margin: .5rem;
+    }
+  }
+>>>>>>> Stashed changes
 }
 label[for="cart"] {
   font-size: 1em;
@@ -208,3 +243,62 @@ footer {
     background-color: #63c915;
   }
 }
+<<<<<<< Updated upstream
+=======
+footer {
+  margin-top: 5rem;
+}
+
+.footercollums {
+  min-height: 500px;
+  margin-inline: auto;
+  padding: 7rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #000;
+  position: sticky;
+  color: var(--white);
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+  & p {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-block: 1.5rem;
+  }
+  & ul {
+    list-style: none;
+    & li {
+      margin-block: 1rem;
+    }
+  }
+  input[type="text"] {
+    font-size: 1rem;
+    border: 0.5px solid black;
+    padding: 1rem 0.5rem;
+    margin: 0.1rem;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .bigimgcontainerindex {
+    background-color: var(--white);
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 1em;
+  }
+
+  .dropdown-content {
+    display: none;
+    float: right;
+  }
+   #menucheck {
+    display: none;
+   }
+   #menucheck:checked ~ .dropdown-content {
+    display: block;
+   }
+}
+>>>>>>> Stashed changes
