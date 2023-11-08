@@ -129,6 +129,7 @@ header {
   letter-spacing: 0.2em;
   margin-block: 5rem;
 }
+
 .discoverourproduts:hover {
   font-weight: bolder;
 }
@@ -283,9 +284,7 @@ header {
   }
   & .productinfo {
     border: 0.5px solid var(--black);
-    & h2,
-    h3,
-    p {
+    & h2, h3, p {
       margin-left: 4rem;
       margin-block: 10px;
     }
@@ -297,21 +296,23 @@ header {
       grid-template-columns: 1fr 1fr;
     }
   }
+  & details {
+    margin: 1rem 4.1rem;
+    }
   & .sizebuttonscontainer {
     display: flex;
     justify-content: space-around;
     margin: 2rem;
     font-weight: bold;
+    max-width: 450px;
+    margin-inline: auto;
     & button {
-      border: none;
+      border: 2px solid var(--blue);
     }
     & button:hover {
       /* change this to edit all buttons */
       background-color: var(--white);
       color: var(--blue);
-      padding: 1rem 1.5rem;
-      font-weight: bolder;
-      border: 2px solid var(--blue);
     }
   }
   & .addtocartcontainer {
@@ -339,7 +340,6 @@ header {
     padding: 1rem 1.5rem;
   }
   & button:hover {
-    padding: 1.5rem 5rem;
     font-weight: bolder;
     background-color: var(--white);
     color: var(--blue);
@@ -559,6 +559,7 @@ header {
     justify-content: start;
   }
 }
+
 footer {
   margin-top: 5rem;
 }
