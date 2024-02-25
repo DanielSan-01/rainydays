@@ -1,29 +1,65 @@
-/* const getProductDetails = async () => {
- const id = "ff94a6eb-524b-4a56-b326-92fd13ee0918";
-    console.log("lol");
-    //console.log(api);
-    const response = await fetch(endPoint);
-    console.log("seher",response);
+let addToCartButton;
+let selectedProductId;
+let productNode;
+let cartButton;
+
+function addToCartHandler() {
+  if (!selectedProductId) {
+    return;
+  }
+
+  let products = [];
+  const storedProducts = JSON.parse(sessionStorage.getItem("storedProducts")); //no brackets
+
+  if (storedProducts) {
+    products = storedProducts;
+  }
+
+  if (products.includes(selectedProductId)) {
+    // Remove item if it allready exists
+    removeItemFromCart(selectedProductId);
+    return;
+  }
+  
+  products.push(selectedProductId);
+  window.sessionStorage.setItem("storedProducts", JSON.stringify(products));
+  console.log(cartButton.classList);
+  
+  cartButton.classList.add(
+    "green"
+  );
 }
-getProductDetails(); */
+
+const removeItemFromCart = (id) => {
+  if (!id) {
+    return;
+  }
+  const storedProducts = JSON.parse(sessionStorage.getItem("storedProducts"));
+  const indexOfStoredItem = storedProducts.indexOf(id);
+
+  if (indexOfStoredItem > -1) {
+    storedProducts.splice(indexOfStoredItem, 1);
+  }
+  window.sessionStorage.setItem(
+    "storedProducts",
+    JSON.stringify(storedProducts)
+  );
+
+  cartButton.classList.remove("green");
+};
 
 async function getProductDetails() {
   try {
-    /* const id = "ff94a6eb-524b-4a56-b326-92fd13ee0918"; */
     const queryString = document.location.search;
     const params = new URLSearchParams(queryString);
     const id = params.get("id");
-    console.log("se for id her", id);
-
-    // https://v2.api.noroff.dev/rainy-days/ff94a6eb-524b-4a56-b326-92fd13ee0918
-
     const endPoint = `https://v2.api.noroff.dev/rainy-days/${id}`;
-    //console.log(api);
     const response = await fetch(endPoint);
-    //console.log(response);
     const data = await response.json();
     buildCard(data.data);
-    console.log("SE-HER", data.data);
+    selectedProductId = data.data.id;
+    addToCartButton = document.getElementById(data.data.id);
+    addToCartButton.addEventListener("click", addToCartHandler);
   } catch (error) {
     console.log(error.message);
   }
@@ -31,15 +67,17 @@ async function getProductDetails() {
 
 getProductDetails();
 
-
 const buildCard = (productData) => {
-  const productNode = document.getElementById("productpage_container");
+  const storedProducts = JSON.parse(sessionStorage.getItem("storedProducts"));
+
+  productNode = document.getElementById("productpage_container");
+  
   productNode.innerHTML = `
-      <h1>${productData.title}</h1>
-      <img src="${productData.image.url}" alt="${productData.title}">
-      <p>${productData.description}</p>
-      <p>${productData.price}</p>
-      `;
-  /* productNode.appendChild(cardContainer); */
-  console.log(productNode);
+  <h1>${productData.title}</h1>
+  <img src="${productData.image.url}" alt="${productData.title}" style="max-width: 300px;">
+  <p>${productData.description}</p>
+  <p>${productData.price}</p>
+  <button class="addToCart" id="${productData.id}">Add to cart</button>
+  `;
+  cartButton = document.getElementById(productData.id);
 };

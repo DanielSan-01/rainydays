@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="corse assignment HTML and CSS @ noroff fagskole">
+    <meta name="description" content="Landingpage">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="author" content="Dannielsan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+    rel="stylesheet"
+    />
+    <script src="script.js" ></script> //defer
+    <title>Rainydays index page</title>
+  </head>
+  <body class="site-grid">
+    <header>
+      <a href="index.html" class="navlogo"></a>
+      <div class="dropdown">
+        <i
+          class="fa fa-shopping-cart"
+          ref="shoppingcart.html"
+          id="carticon"
+        ></i>
+        <input type="checkbox" id="menucheck">
+        <label for="menucheck"><p>menu</p></label>
+        <i class="fa fa-bars" id="menuicon"></i>
+        <div class="dropdown-content">
+          <a href="products.html">Products</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="cart.html">Cart</a>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <h1 class="hidoh1">Rainydays frontpage</h1>
+      <section class="herocontainer">
+        <div class="herosection">
+          <!-- <img src="/assets/heroimg.jpg" alt="product image" /> -->
+          <a href="products.html" aria-label="heroimage" class="imgbutton-hero"
+            >Explore our collection</a
+          >
+        </div>
+      </section>
+      <div class="discovertext">
+        <a href="cards.html" class="discoverourproduts"
+          >Discover your adventure</a
+        >
+      </div>
+      <div class="cardsindex">
+        <div class="card">
+          <img src="./assets/jakke7.jpg" alt="product image" />
+          <h2>Mens Better Sweater</h2>
+          <p class="price">1899,-</p>
+          <a href="productpage.html" >Shop now</a>
+        </div>
+        <div class="card">
+          <img src="./assets/jakke7.jpg" alt="product image" />
+          <h2>Mens Better Sweater</h2>
+          <p class="price">1899,-</p>
+          <a href="productpage.html" >Shop now</a>
+        </div>
+        <div class="card">
+          <img src="./assets/jakke7.jpg" alt="product image" />
+          <h2>Mens Better Sweater</h2>
+          <p class="price">1899,-</p>
+          <a href="productpage.html" >Shop now</a>
+        </div>
+      </div>
+      <section class="bottomindexsection">
+        <div class="bigimgcontainerindex">
+          <div class="bigimg1index">
+            <img src="./assets/bigimgwhite.jpg" alt="product image" />
+            <a href="products.html"
+              >Explore womens collection</a
+            >
+          </div>
+          <div class="bigimg2index">
+            <img src="./assets/bigimageblack.jpg" alt="product image" />
+            <a href="products.html" 
+              >Explore mens collection</a
+            >
+          </div>
+        </div>
+        <div class="bigimgbottomindex">
+          <a href="products.html" aria-label="product page" class="imgbutton-bottom"
+            >Explore our collection</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footercollums">
+<!--         <p>Copyright&copy;</p> -->
+        <div class="footer1">
+          <p class="footertitle1">May we help you</p>
+          <ul>
+            <li><a href="contact.html"></a>Contact</li>
+            <li><a href="about.html"></a>FAQ</li>
+            <li><a href="about.html"></a>About us</li>
+          </ul>
+        </div>
+        <div class="footer2">
+          <p class="footertitle2">Your profile</p>
+          <ul>
+            <li><a href="signin.html"></a>Contact</li>
+            <li><a href="cart.html"></a>Orders</li>
+            <li><a href="privacy.html"></a>Privacy and cookie policy</li>
+          </ul>
+        </div>
+        <div class="footer3">
+          <p class="footertitle3">Sign up for email updates</p>
+          <p>E-mail</p>
+          <input type="text" placeholder="Sign up for email updates" name="emailsignup"/>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
