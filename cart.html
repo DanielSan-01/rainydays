@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="corse assignment HTML and CSS @ noroff fagskole">
-    <meta name="description" content="Ceckoutpage">
-    <meta name="keywords" content="HTML, CSS">
-    <meta name="author" content="Dannielsan">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Checkout page</title>
-    <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
-    rel="stylesheet"
-    />
-    <link href="styles.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-    rel="stylesheet"
-    />
-    <script src="cartPage.js"></script>
-  </head>
-  <body class="site-grid">
-    <header>
-      <a href="index.html" class="navlogo"></a>
-      <div class="dropdown">
-        <i
-          class="fa fa-shopping-cart"
-          ref="shoppingcart.html"
-          id="carticon"
-        ></i>
-        <input type="checkbox" id="menucheck">
-        <label for="menucheck"><p>menu</p></label>
-        <i class="fa fa-bars" id="menuicon"></i>
-        <div class="dropdown-content">
-          <a href="products.html">Products</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-          <a href="cart.html">Cart</a>
-        </div>
-      </div>
-    </header>
-    <main class="main">
-      <h1 class="hidoh1">Checkoutpage</h1>
-      <div class="checkoutgrid">
-        <div class="checkoutinformationarea">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="description"
+			content="corse assignment HTML and CSS @ noroff fagskole" />
+		<meta name="description" content="Ceckoutpage" />
+		<meta name="keywords" content="HTML, CSS" />
+		<meta name="author" content="Dannielsan" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Checkout page</title>
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+			rel="stylesheet" />
+		<link href="styles.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+			rel="stylesheet" />
+		<script src="cartPage.js"></script>
+	</head>
+	<body class="site-grid">
+		<header>
+			<a href="index.html" class="navlogo"></a>
+			<div class="dropdown">
+				<i
+					class="fa fa-shopping-cart"
+					ref="shoppingcart.html"
+					id="carticon"></i>
+				<input type="checkbox" id="menucheck" />
+				<label for="menucheck"><p>menu</p></label>
+				<i class="fa fa-bars" id="menuicon"></i>
+				<div class="dropdown-content">
+					<a href="products.html">Products</a>
+					<a href="about.html">About</a>
+					<a href="contact.html">Contact</a>
+					<a href="cart.html">Cart</a>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<h1 class="hidoh1">Checkoutpage</h1>
+			<div class="checkoutgrid" id="cartItemsNode">
+				<div class="checkoutCardContainer"></div>
+				<!-- <div class="checkoutinformationarea">
           <i class="fa fa-shopping-bag" id="shoppingbag">1 items</i>
           <p>______________________________</p>
           <div class="titlepicturepricecontainer">
@@ -72,53 +72,60 @@
               <p><b>Kr. 2248.00</b></p>
             </div>
           </div>
-        </div>
-        <div class="checkoutinputarea">
-          <h2>Fill in shipping info</h2>
-          <form class="inputgrid">
-            <input type="text" placeholder="First Name" name="fname">
-            <input type="text" placeholder="Last Name" name="lname">
-            <input type="text" placeholder="E-mail" name="email">
-            <input type="text" placeholder="Phone number" name="number">
-            <input type="text" placeholder="Contry/region" name="contry">
-            <input type="text" placeholder="City" name="City">
-            <input type="text" placeholder="Adress" id="adress" name="adress">
-            <button type="submit" name="cartbutton" class="paymentbutton"><a href="cartsucsess.html" class="paymentbutton">Payment</a></button>
-          </form>
-          <div class="checkbox">
-            <input type="checkbox" name="checbox" class="checkbox">
-            <label for="checbox" class="checbox">I agree to legal terms and conditions</label>
-          </div>
-        </div>
-      </div>
-    </main>
-    <footer class="footer">
-      <div class="footercollums">
-<!--         <p>Copyright&copy;</p> -->
-        <div class="footer1">
-          <p class="footertitle1">May we help you</p>
-          <ul>
-            <li><a href="contact.html"></a>Contact</li>
-            <li><a href="about.html"></a>FAQ</li>
-            <li><a href="about.html"></a>About us</li>
-          </ul>
-        </div>
-        <div class="footer2">
-          <p class="footertitle2">Your profile</p>
-          <ul>
-            <li><a href="signin.html"></a>Contact</li>
-            <li><a href="cart.html"></a>Orders</li>
-            <li><a href="privacy.html"></a>Privacy and cookie policy</li>
-          </ul>
-        </div>
-        <div class="footer3">
-          <p class="footertitle3">Sign up for email updates</p>
-          <p>E-mail</p>
-          <input type="text" placeholder="Sign up for email updates" name="emailsignup"/>
-        </div>
-      </div>
-    </footer>
-  </body>
+        </div> -->
+				<!-- <div class="checkoutinputarea">
+					<h2>Fill in shipping info</h2>
+					<form class="inputgrid">
+						<input type="text" placeholder="First Name" name="fname" />
+						<input type="text" placeholder="Last Name" name="lname" />
+						<input type="text" placeholder="E-mail" name="email" />
+						<input type="text" placeholder="Phone number" name="number" />
+						<input type="text" placeholder="Contry/region" name="contry" />
+						<input type="text" placeholder="City" name="City" />
+						<input type="text" placeholder="Adress" id="adress" name="adress" />
+						<button type="submit" name="cartbutton" class="paymentbutton">
+							<a href="cartsucsess.html" class="paymentbutton">Payment</a>
+						</button>
+					</form>
+					<div class="checkbox">
+						<input type="checkbox" name="checbox" class="checkbox" />
+						<label for="checbox" class="checbox"
+							>I agree to legal terms and conditions</label
+						>
+					</div>
+				</div> -->
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footercollums">
+				<!--         <p>Copyright&copy;</p> -->
+				<div class="footer1">
+					<p class="footertitle1">May we help you</p>
+					<ul>
+						<li><a href="contact.html"></a>Contact</li>
+						<li><a href="about.html"></a>FAQ</li>
+						<li><a href="about.html"></a>About us</li>
+					</ul>
+				</div>
+				<div class="footer2">
+					<p class="footertitle2">Your profile</p>
+					<ul>
+						<li><a href="signin.html"></a>Contact</li>
+						<li><a href="cart.html"></a>Orders</li>
+						<li><a href="privacy.html"></a>Privacy and cookie policy</li>
+					</ul>
+				</div>
+				<div class="footer3">
+					<p class="footertitle3">Sign up for email updates</p>
+					<p>E-mail</p>
+					<input
+						type="text"
+						placeholder="Sign up for email updates"
+						name="emailsignup" />
+				</div>
+			</div>
+		</footer>
+	</body>
 </html>
 
 <!-- <ul>
