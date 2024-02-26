@@ -13,9 +13,13 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+      <script src="allProductsPage.js" defer></script>
 </head>
 <body class="site-grid">
   <header>
+    <!-- SELECT -->
+    <div id="select-container"></div>
+
     <a href="index.html" class="navlogo"></a>
     <div class="dropdown">
       <i
@@ -34,73 +38,10 @@
       </div>
     </div>
   </header>
-<main class="main"> 
-  <h1 class="hidoh1">Our products</h1>
-  <div class="containerproducts">
-    <div class="cardsproducts">
-        <div class="card">
-            <img src="./assets/jakke7.jpg" alt="product image">
-            <h2>Mens Better Sweater</h2>
-            <p class="price">1899,-</p>
-            <a href="productpage.html" aria-label="product page">Shop now</a>
-        </div>
-        <div class="card">
-            <img src="./assets/jakke7.jpg" alt="product image">
-            <h2>Mens Better Sweater</h2>
-            <p class="price">1899,-</p>
-            <a href="productpage.html" aria-label="product page">Shop now</a>
-        </div>
-        <div class="card">
-            <img src="./assets/jakke7.jpg" alt="product image">
-            <h2>Mens Better Sweater</h2>
-            <p class="price">1899,-</p>
-            <a href="productpage.html" aria-label="product page">Shop now</a>
-        </div>
-        <div class="card">
-            <img src="./assets/jakke7.jpg" alt="product image">
-            <h2>Mens Better Sweater</h2>
-            <p class="price">1899,-</p>
-            <a href="productpage.html" aria-label="product page">Shop now</a>
-        </div>
-        <div class="card">
-            <img src="./assets/jakke7.jpg" alt="product image">
-            <h2>Mens Better Sweater</h2>
-            <p class="price">1899,-</p>
-            <a href="productpage.html" aria-label="product page">Shop now</a>
-        </div>
-        <div class="card">
-            <img src="./assets/jakke7.jpg" alt="product image">
-            <h2>Mens Better Sweater</h2>
-            <p class="price">1899,-</p>
-            <a href="productpage.html" aria-label="product page">Shop now</a>
-        </div>
+  <div class="cards" id="singleCardContainer"></div>
+    <div class="filtered" id="filteredCardContainer"></div>
+<main class="main" id="mainAllProducts"> 
 </div>
-</main>
-<footer class="footer">
-  <div class="footercollums">
-<!--         <p>Copyright&copy;</p> -->
-    <div class="footer1">
-      <p class="footertitle1">May we help you</p>
-      <ul>
-        <li><a href="contact.html"></a>Contact</li>
-        <li><a href="about.html"></a>FAQ</li>
-        <li><a href="about.html"></a>About us</li>
-      </ul>
-    </div>
-    <div class="footer2">
-      <p class="footertitle2">Your profile</p>
-      <ul>
-        <li><a href="signin.html"></a>Contact</li>
-        <li><a href="cart.html"></a>Orders</li>
-        <li><a href="privacy.html"></a>Privacy and cookie policy</li>
-      </ul>
-    </div>
-    <div class="footer3">
-      <p class="footertitle3">Sign up for email updates</p>
-      <p>E-mail</p>
-      <input type="text" placeholder="Sign up for email updates" name="emailsignup"/>
-    </div>
-  </div>
-</footer>
+<div class="cards" id="allCardsContainer">
   </body>
 </html>

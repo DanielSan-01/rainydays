@@ -20,14 +20,12 @@ function addToCartHandler() {
     removeItemFromCart(selectedProductId);
     return;
   }
-  
+
   products.push(selectedProductId);
   window.sessionStorage.setItem("storedProducts", JSON.stringify(products));
   console.log(cartButton.classList);
-  
-  cartButton.classList.add(
-    "green"
-  );
+
+  cartButton.classList.add("green");
 }
 
 const removeItemFromCart = (id) => {
@@ -71,7 +69,7 @@ const buildCard = (productData) => {
   const storedProducts = JSON.parse(sessionStorage.getItem("storedProducts"));
 
   productNode = document.getElementById("productpage_container");
-  
+
   productNode.innerHTML = `
   <h1>${productData.title}</h1>
   <img src="${productData.image.url}" alt="${productData.title}" style="max-width: 300px;">

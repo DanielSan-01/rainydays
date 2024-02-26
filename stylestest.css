@@ -18,7 +18,6 @@
   }
 }
 
-
 .banner {
   width: 100%;
   height: 100vh;
@@ -40,6 +39,9 @@
 .logo {
   width: 500px;
   cursor: pointer;
+  background-color: var(--white);
+  border-radius: var(--borderRadius);
+  padding-right: 5px;
 }
 
 .navbar ul li {
@@ -59,10 +61,10 @@
   content: "";
   height: 3px;
   width: 0;
-  background: var(--blueRainydays);
+  background: var(--white);
   position: absolute;
   left: 0;
-  bottom: -10px;
+  bottom: -5px;
   transition: 0.5s;
 }
 
@@ -90,21 +92,7 @@
   line-height: 25px;
 }
 
-.women-btn {
-  width: 200px;
-  padding: 15px 0;
-  text-align: center;
-  margin: 20px 10px;
-  border-radius: var(--borderRadius);
-  font-weight: bold;
-  border: 2px solid var(--blueRainydays);
-  background: transparent;
-  color: white;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
-
+.women-btn,
 .men-btn {
   width: 200px;
   padding: 15px 0;
@@ -112,7 +100,7 @@
   margin: 20px 10px;
   border-radius: var(--borderRadius);
   font-weight: bold;
-  border: 2px solid var(--blueRainydays);
+  border: 3px solid var(--blueRainydays);
   background: transparent;
   color: white;
   cursor: pointer;
@@ -138,4 +126,11 @@ button:hover span {
 
 button:hover {
   border: none;
+}
+
+#singleCardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
 }
