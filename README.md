@@ -19,8 +19,8 @@ Technologies Used
 Setup Instructions
 
 To run this project locally, follow these steps:
+Clone the repo:
 
-    Clone the repository:
     git clone git@github.com:DanielSan-01/rainydays.git
 
 
