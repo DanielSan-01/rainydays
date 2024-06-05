@@ -21,10 +21,9 @@ Setup Instructions
 To run this project locally, follow these steps:
 
     Clone the repository:
+    git clone git@github.com:DanielSan-01/rainydays.git
 
-    bash
 
-git clone git@github.com:DanielSan-01/rainydays.git
 
 # Rainydays links
 https://danielsan-01.github.io/rainydays/index.html
